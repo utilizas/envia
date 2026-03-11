@@ -217,3 +217,10 @@ figcaption {
 ::-webkit-scrollbar-track { background: #1e2328; }
 ::-webkit-scrollbar-thumb { background: #444c56; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #636e7b; }
+
+div.abstract {
+  border-top:    1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  padding: 1rem 0 1.2rem 0;
+  margin-bottom: 1.4rem;
+}
