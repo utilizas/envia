@@ -1,0 +1,219 @@
+/*-- scss:defaults --*/
+
+// ─── Google Fonts ────────────────────────────────────────────────────────────
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+// ─── Palette: GitHub Dimmed ──────────────────────────────────────────────────
+$body-bg:             #22272e;
+$body-color:          #adbac7;
+$link-color:          #539bf5;
+$link-hover-color:    #80b4fd;
+
+$headings-color:      #cdd9e5;
+$headings-font-weight: 600;
+
+$code-bg:             #2d333b;
+$code-color:          #e3b341;
+$pre-bg:              #2d333b;
+$pre-color:           #adbac7;
+
+$border-color:        #444c56;
+$table-border-color:  #444c56;
+$table-color:         #adbac7;
+
+// ─── Typography ──────────────────────────────────────────────────────────────
+$font-family-base:        'Source Serif 4', Georgia, 'Times New Roman', serif;
+$font-family-sans-serif:  'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+$font-family-monospace:   'JetBrains Mono', 'Courier New', monospace;
+$font-size-base:          1rem;
+$line-height-base:        1.7;
+$headings-line-height:    1.3;
+
+// ─── Spacing & layout ────────────────────────────────────────────────────────
+$blockquote-font-size:    0.95rem;
+
+/*-- scss:rules --*/
+
+// ─── Document body ───────────────────────────────────────────────────────────
+body {
+  font-family: $font-family-base;
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+// ─── Headings: IBM Plex Sans para brevedad visual ────────────────────────────
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans-serif;
+  color: $headings-color;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: 1.75rem; border-bottom: 1px solid #444c56; padding-bottom: 0.4rem; }
+h2 { font-size: 1.35rem; border-bottom: 1px solid #373e47; padding-bottom: 0.25rem; }
+h3 { font-size: 1.1rem; }
+
+// ─── Links ───────────────────────────────────────────────────────────────────
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover { color: $link-hover-color; text-decoration: underline; }
+}
+
+// ─── TOC ─────────────────────────────────────────────────────────────────────
+#quarto-sidebar,
+.sidebar.toc-left {
+  background-color: #1e2328;
+  border-right: 1px solid #373e47;
+}
+
+.sidebar-item a {
+  color: #8b949e;
+  font-family: $font-family-sans-serif;
+  font-size: 0.85rem;
+}
+
+.sidebar-item a:hover,
+.sidebar-item a.active {
+  color: $link-color;
+}
+
+// ─── Code blocks ─────────────────────────────────────────────────────────────
+pre {
+  background-color: $pre-bg;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  color: $pre-color;
+  font-family: $font-family-monospace;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+code {
+  font-family: $font-family-monospace;
+  font-size: 0.85em;
+  color: $code-color;
+  background-color: rgba(45, 51, 59, 0.6);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+// ─── Tables ──────────────────────────────────────────────────────────────────
+.table {
+  color: $body-color;
+  border-color: $border-color;
+}
+
+.table thead th {
+  background-color: #2d333b;
+  color: $headings-color;
+  font-family: $font-family-sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-bottom: 2px solid #539bf5;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(83, 155, 245, 0.05);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(45, 51, 59, 0.5);
+}
+
+// ─── Blockquotes ─────────────────────────────────────────────────────────────
+blockquote {
+  border-left: 4px solid #539bf5;
+  background-color: rgba(45, 51, 59, 0.6);
+  padding: 0.6em 1.2em;
+  color: #8b949e;
+  font-style: italic;
+  margin: 1.2rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+// ─── Title block ─────────────────────────────────────────────────────────────
+.quarto-title h1.title {
+  font-size: 2rem;
+  color: #cdd9e5;
+  font-family: $font-family-sans-serif;
+}
+
+.quarto-title .subtitle {
+  color: #8b949e;
+  font-family: $font-family-sans-serif;
+  font-size: 1rem;
+}
+
+.quarto-title-meta-heading {
+  color: #636e7b;
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.quarto-title-meta-contents {
+  color: #8b949e;
+  font-family: $font-family-sans-serif;
+  font-size: 0.9rem;
+}
+
+// ─── Abstract / callouts ─────────────────────────────────────────────────────
+.abstract-title {
+  font-family: $font-family-sans-serif;
+  font-weight: 600;
+  color: $headings-color;
+}
+
+.callout {
+  border-radius: 6px;
+  border-left-width: 4px;
+}
+
+.callout-note {
+  border-left-color: #539bf5;
+  background-color: rgba(83, 155, 245, 0.07);
+}
+
+.callout-warning {
+  border-left-color: #e3b341;
+  background-color: rgba(227, 179, 65, 0.07);
+}
+
+.callout-important {
+  border-left-color: #f47067;
+  background-color: rgba(244, 112, 103, 0.07);
+}
+
+// ─── Figures ─────────────────────────────────────────────────────────────────
+.figure-caption,
+figcaption {
+  color: #636e7b;
+  font-family: $font-family-sans-serif;
+  font-size: 0.82rem;
+  text-align: center;
+  margin-top: 0.4rem;
+}
+
+// ─── References section ──────────────────────────────────────────────────────
+#referencias, #refs {
+  font-size: 0.88rem;
+  color: $body-color;   // #adbac7 — mismo tono que el cuerpo principal
+}
+
+#refs .csl-entry {
+  margin-bottom: 0.8em;
+  padding-left: 2em;
+  text-indent: -2em;
+  color: $body-color;   // evita herencia accidental de colores grises
+}
+
+// ─── Scrollbar (Webkit) ──────────────────────────────────────────────────────
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track { background: #1e2328; }
+::-webkit-scrollbar-thumb { background: #444c56; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #636e7b; }

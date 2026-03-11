@@ -1,0 +1,111 @@
+/*-- scss:defaults --*/
+
+// ─── Google Fonts ────────────────────────────────────────────────────────────
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+// ─── Palette: tono light neutro académico ────────────────────────────────────
+$body-bg:             #f8f9fa;
+$body-color:          #1c1e24;
+$link-color:          #0550ae;
+$link-hover-color:    #033d8b;
+
+$headings-color:      #0d1117;
+$headings-font-weight: 600;
+
+$code-bg:             #f3f4f6;
+$code-color:          #953800;
+$pre-bg:              #f3f4f6;
+
+$border-color:        #d0d7de;
+$table-border-color:  #d0d7de;
+
+// ─── Typography ──────────────────────────────────────────────────────────────
+$font-family-base:        'Source Serif 4', Georgia, serif;
+$font-family-sans-serif:  'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+$font-family-monospace:   'JetBrains Mono', 'Courier New', monospace;
+$font-size-base:          1rem;
+$line-height-base:        1.7;
+
+/*-- scss:rules --*/
+
+body {
+  font-family: $font-family-base;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans-serif;
+  color: $headings-color;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: 1.75rem; border-bottom: 1px solid #d0d7de; padding-bottom: 0.4rem; }
+h2 { font-size: 1.35rem; border-bottom: 1px solid #eaeef2; padding-bottom: 0.25rem; }
+h3 { font-size: 1.1rem; }
+
+code {
+  font-family: $font-family-monospace;
+  font-size: 0.85em;
+  color: $code-color;
+  background-color: $code-bg;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: $pre-bg;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  font-family: $font-family-monospace;
+  font-size: 0.82rem;
+}
+
+.table thead th {
+  background-color: #f0f3f6;
+  font-family: $font-family-sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-bottom: 2px solid #0550ae;
+}
+
+blockquote {
+  border-left: 4px solid #0550ae;
+  background-color: #f0f6ff;
+  padding: 0.6em 1.2em;
+  color: #424a53;
+  font-style: italic;
+  border-radius: 0 4px 4px 0;
+}
+
+.quarto-title h1.title {
+  font-family: $font-family-sans-serif;
+  font-size: 2rem;
+}
+
+.quarto-title .subtitle {
+  font-family: $font-family-sans-serif;
+  color: #424a53;
+}
+
+.quarto-title-meta-heading {
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6e7781;
+}
+
+.figure-caption, figcaption {
+  font-family: $font-family-sans-serif;
+  font-size: 0.82rem;
+  color: #6e7781;
+  text-align: center;
+  margin-top: 0.4rem;
+}
+
+#refs .csl-entry {
+  margin-bottom: 0.8em;
+  padding-left: 2em;
+  text-indent: -2em;
+  font-size: 0.88rem;
+  color: #424a53;
+}
